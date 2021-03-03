@@ -26,21 +26,40 @@ const savePost = async (req, res) => {
         console.log(post);
     } catch (error) {
         console.log(error);
-        res.status(400).send("SOmething Went Wrong");
+        res.status(400).send("Something Went Wrong");
     }
 }
 
 /*
-Patch Request
+Patch Request to update the post
 */
-
 const updatePost = async (req, res) => {
     try {
+        const updates = await req.body;
+        const updatedPost = await PostModel.findByIdAndUpdate(req.params._id, updates);
+        res.status(202).json({result: "Updated", statusCode: 202, update_info: updatedPost});
+        console.log(updatedPost);
         
     } catch (error) {
         console.log(error);
-        res.status(401).send("SOmething Went Wrong");
+        res.status(400).send("Unable to update");
     }
 }
 
-module.exports = { getPosts, savePost };
+
+/*
+Delete Request to delete the post
+*/
+const deletePost = async (req, res) => {
+    try {
+        const deletedPost = await PostModel.findByIdAndDelete(req.params._id);
+        res.status(200).json({result: "Deleted", statusCode: 200, delete_info: deletedPost});
+        console.log(deletedPost);
+        
+    } catch (error) {
+        console.log(error);
+        res.status(400).send("Unable to delete");
+    }
+}
+
+module.exports = { getPosts, savePost, updatePost, deletePost };
