@@ -1,5 +1,7 @@
 const PostModel = require('../models/posts');   // Importing the PostModel
 
+// These are the methods that will be triggered whenever user request
+// Request may be - GET, POST, PATCH, PUT, OR DELETE
 
 /*
 Get Request

@@ -5,7 +5,6 @@ const router = require('./src/routes/posts');
 require('./src/database/conn');     // Requiring database connection
 
 const app = express();
-
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
