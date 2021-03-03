@@ -1,10 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import BottomNav from './components/BottomNav'
 
 function App() {
   return (
-      <BottomNav />
+    <h1>Hello From React</h1>
   );
 }
 
