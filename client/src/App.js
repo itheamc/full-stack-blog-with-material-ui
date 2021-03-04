@@ -1,9 +1,15 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import CustomTabs from './components/header/navbar/BigScreenNavBar'
+import NavBar from './components/header/navbar/SmallScreenNavBar'
+
 
 function App() {
   return (
-    <h1>Hello From React</h1>
+        <>
+          <CustomTabs />
+          <NavBar />
+        </>
   );
 }
 
