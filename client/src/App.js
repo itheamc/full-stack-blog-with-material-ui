@@ -1,14 +1,12 @@
 // import logo from './logo.svg';
 import './App.css';
-import CustomTabs from './components/header/navbar/BigScreenNavBar'
-import NavBar from './components/header/navbar/SmallScreenNavBar'
+import Layout from './components/layout/Layout';
 
 
 function App() {
   return (
         <>
-          <CustomTabs />
-          <NavBar />
+          <Layout />
         </>
   );
 }

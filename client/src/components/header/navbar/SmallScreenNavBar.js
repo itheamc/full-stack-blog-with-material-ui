@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SearchAppBar() {
+const SmallScreenNavBar = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
 
@@ -108,3 +108,5 @@ export default function SearchAppBar() {
     </div>
   );
 }
+
+export default SmallScreenNavBar;

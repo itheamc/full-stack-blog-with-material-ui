@@ -8,6 +8,7 @@ export const useStyles = makeStyles((theme) => ({
       backgroundColor: '#2e1534',
       color: '#fff',
       padding: '2% 5%',
+      textAlign: 'center',
     },
     
     tabContainer: {
