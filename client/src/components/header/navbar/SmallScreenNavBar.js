@@ -17,7 +17,7 @@ const SmallScreenNavBar = () => {
 
 
   return (
-    <div className={classes.root}>
+    <div className={`${classes.root}`}>
       <AppBar position="static" className = {classes.appBar}>
         <Toolbar>
           <IconButton

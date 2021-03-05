@@ -13,6 +13,7 @@ export const useStyles = makeStyles((theme) => ({
     
     tabContainer: {
       backgroundColor: '#2e1534',
+      transition: '0.3s',
     },
     padding: {
       padding: theme.spacing(3),
@@ -20,6 +21,13 @@ export const useStyles = makeStyles((theme) => ({
     // These are properties for SmallScreenSize
     appBar: {
       backgroundColor: '#2e1534',
+    },
+    appBarStiky: {
+      display: 'inline',
+      position: 'fixed',
+      width: '100%',
+      zIndex: 10,
+      marginBottom: '100px',
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -76,4 +84,17 @@ export const useStyles = makeStyles((theme) => ({
       //   },
       // },
     },
+    // hidden_class: {
+    //   // display: 'none',
+    // },
+    // sticky: {
+    //   width: '100%',
+    //   paddingTop: '24px',
+    //   position: 'fixed',
+    //   zIndex: 10,
+    // },
+    transitionClass: {
+      transition: '0.7s',
+    },
+
   }));

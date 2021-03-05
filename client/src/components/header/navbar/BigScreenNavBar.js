@@ -7,15 +7,21 @@ const BigScreenNavBar = () => {
     const classes = useStyles();
     const [value, setValue] = useState(0);
 
+    // useEffect(() => {
+    //     nav_div.current?.focus();
+    //     setNavOffsetTop(nav_div.current?.offsetTop);
+    //     // console.log(nav_div.current?.offsetTop);
+    // }, [navOffsetTop]);
+
     const handleChange = (event, newValue) => {
     setValue(newValue);
-    console.log(event.target.innerText);
+    // console.log(event.target.innerText);
     };
 
 
     return (
         <div className = {classes.root}>
-            <div className = {classes.titleContainer}>
+            <div className = {`${classes.titleContainer} ${classes.transitionClass}`}>
                 <Typography variant = "h2">Blog Title</Typography>
             </div>
             <div className={classes.tabContainer}>
