@@ -2,9 +2,9 @@ import React from 'react'
 import { Grid } from '@material-ui/core'
 import { useStyles } from "./Styles";
 import Post from '../post/Post'
-import { posts } from './Samples'
+// import { posts } from './Samples'
 
-const Posts = () => {
+const Posts = ({posts}) => {
     const classes = useStyles();
 
     return (
