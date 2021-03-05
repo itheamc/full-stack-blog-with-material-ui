@@ -4,8 +4,9 @@ import Grid from "@material-ui/core/Grid";
 import BigScreenNavBar from "../header/navbar/BigScreenNavBar";
 import SmallScreenNavBar from "../header/navbar/SmallScreenNavBar";
 import BlogPagination from '../body/post_container/pagination/BlogPagination'
-import { useStyles } from './Themes'
+import { useStyles } from './Styles'
 import { widths } from './Widths'
+import Posts from '../body/post_container/posts/Posts'
 
 
 
@@ -41,10 +42,11 @@ const Layout = () => {
               {width > widths.lg ? <BigScreenNavBar /> : <SmallScreenNavBar />}
           </Paper>
         </Grid>
-        <Grid item xs={width > widths.md ? 8 : 12}>
+        <Grid item xs={width > widths.lg ? 8 : 12}>
+            <Posts />
             <BlogPagination />
         </Grid>
-        <Grid item xs={width > widths.md ? 4 : false}>
+        <Grid item xs={width > widths.lg ? 4 : false}>
           <Paper className={`${classes.paper} ${classes.sidebar}`}>
               
           </Paper>
