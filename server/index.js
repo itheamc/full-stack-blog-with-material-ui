@@ -1,5 +1,6 @@
 const express = require('express');
 const router = require('./src/routes/posts');
+const cors = require('cors');
 // import router from './src/routes/posts';
 // import express from "express";  // Here import statement is used because i have inserted "type": "module" below the "main": "index.js" in the package.json
 require('./src/database/conn');     // Requiring database connection
@@ -8,6 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
+app.use(cors());
 app.use('/posts', router);
 
 //Function to check weather app is successfully running or not
