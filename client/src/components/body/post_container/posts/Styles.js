@@ -6,6 +6,10 @@ export const useStyles = makeStyles((theme) => ({
       flexWrap: 'wrap',
       justifyContent: 'space-around',
       overflow: 'hidden',
+      flexDirection: 'column',
+      [theme.breakpoints.up('lg')]: {
+        flexDirection: 'row',
+      },
       backgroundColor: theme.palette.background.paper,
     },
   }));
