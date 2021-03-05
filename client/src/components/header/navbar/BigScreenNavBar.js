@@ -3,7 +3,7 @@ import { StyledTabs, StyledTab } from "../styles/Components";
 import { useStyles } from "../styles/Themes";
 import { Typography } from "@material-ui/core";
 
-const CustomTabs = () => {
+const BigScreenNavBar = () => {
     const classes = useStyles();
     const [value, setValue] = useState(0);
 
@@ -33,4 +33,4 @@ const CustomTabs = () => {
     )
 }
 
-export default CustomTabs
+export default BigScreenNavBar
